@@ -40,5 +40,5 @@ new Map({
 });
 
 map.on('moveend', function(e) {
-  console.log("hello")
+  console.log("hello");
 });
