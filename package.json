@@ -1,0 +1,15 @@
+{
+  "name": "marepau-FBAdmin",
+  "dependencies": {
+    "jquery": "^3.4.1",
+    "ol": "6.1.1",
+    "parcel-plugin-asset-copier": "^1.0.0"
+  },
+  "devDependencies": {
+    "parcel": "^1.12.4"
+  },
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build --experimental-scope-hoisting --public-url . index.html"
+  }
+}
