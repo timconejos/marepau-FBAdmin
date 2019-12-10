@@ -84786,7 +84786,7 @@ var chart = new _chart.default(ctx, {
     labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
     datasets: [{
       fill: true,
-      label: 'My First dataset',
+      label: 'remittance',
       pointBorderColor: "white",
       borderColor: 'rgb(255, 255, 255)',
       data: [50, 40, 13, 7, 9, 29, 31, 28, 33, 35, 40, 70],
@@ -84804,6 +84804,70 @@ var chart = new _chart.default(ctx, {
     },
     legend: {
       display: false
+    }
+  }
+});
+var ctx1 = document.getElementById('myChart2').getContext('2d');
+var chart2 = new _chart.default(ctx1, {
+  // The type of chart we want to create
+  type: 'bar',
+  responsive: true,
+  scaleFontColor: 'white',
+  // The data for our dataset
+  data: {
+    labels: ['Company X', 'Company Y', 'Company A', 'Company C', 'Company D', 'Company W'],
+    datasets: [{
+      fill: true,
+      backgroundColor: 'white',
+      label: 'investment',
+      pointBorderColor: "white",
+      borderColor: 'rgb(255, 255, 255)',
+      data: [50, 40, 39, 38, 37, 35],
+      pointBackgroundColor: 'white'
+    }]
+  },
+  options: {}
+});
+var ctx2 = document.getElementById('myChart3').getContext('2d');
+
+var dynamicColors = function dynamicColors() {
+  var r = Math.floor(Math.random() * 255);
+  var g = Math.floor(Math.random() * 255);
+  var b = Math.floor(Math.random() * 255);
+  return "rgb(" + r + "," + g + "," + b + ")";
+};
+
+var backgrounds = [];
+var labels = [];
+var values = [];
+
+for (var i = 0; i < 12; i++) {
+  labels.push("Data " + i);
+  values.push(Math.floor(Math.random() * 100));
+  backgrounds.push(dynamicColors());
+}
+
+var chart3 = new _chart.default(ctx2, {
+  // The type of chart we want to create
+  type: 'doughnut',
+  responsive: true,
+  scaleFontColor: 'white',
+  // The data for our dataset
+  data: {
+    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+    datasets: [{
+      fill: true,
+      backgroundColor: backgrounds,
+      label: labels,
+      borderColor: 'white',
+      data: values
+    }]
+  },
+  options: {
+    elements: {
+      line: {
+        tension: 0
+      }
     }
   }
 });
@@ -84835,7 +84899,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55575" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63720" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

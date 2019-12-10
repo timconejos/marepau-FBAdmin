@@ -36,10 +36,6 @@
       height: 600px;
       width: 100%;
     }
-
-    #chart1 {
-      /*background-color: rgba(47, 152, 208, 0.0);*/
-    }
   </style>
 </head>
 
@@ -53,7 +49,7 @@
    -->
       <div class="logo">
         <a href="http://www.creative-tim.com" class="simple-text logo-mini">
-          Logo
+          <img width="100%" src="assets/img/AppLogoNoReflection.png">
         </a>
         <a href="http://www.creative-tim.com" class="simple-text logo-normal">
           Fusion BankerOS<br>Analytics
@@ -67,7 +63,24 @@
               <p>Dashboard</p>
             </a>
           </li>
-          <!-- your sidebar here -->
+          <li class="nav-item ">
+            <a class="nav-link" href="#">
+              <i class="material-icons">content_paste</i>
+              <p>Details</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="#">
+              <i class="material-icons">person</i>
+              <p>User Profile</p>
+            </a>
+          </li>
+          <li class="nav-item  ">
+            <a class="nav-link" href="#">
+              <i class="material-icons">unarchive</i>
+              <p>Logout</p>
+            </a>
+          </li>
         </ul>
       </div>
     </div>
@@ -106,7 +119,7 @@
             <div class="col-md-6">
               <div id="map" class="map"></div>
             </div>
-          
+
             <div class="col-md-6">
               <div class="card card-chart">
                 <div class="card-header card-header-success">
@@ -119,6 +132,49 @@
 
                   <p class="card-category">
                     Remittance</p>
+                </div>
+                <div class="card-footer">
+                  <div class="stats">
+                    <i class="material-icons">access_time</i> updated 4 minutes ago
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="card card-chart">
+                <div class="card-header card-header-warning">
+                  <div class="ct-chart" id="chart2">
+                    <canvas id="myChart2"></canvas>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h4 class="card-title"></h4>
+
+                  <p class="card-category">
+                    Investments</p>
+                </div>
+                <div class="card-footer">
+                  <div class="stats">
+                    <i class="material-icons">access_time</i> updated 4 minutes ago
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="card card-chart">
+                <div class="card-header card-header-danger">
+                  <div class="ct-chart" id="chart1">
+                    <canvas id="myChart3"></canvas>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h4 class="card-title"></h4>
+
+                  <p class="card-category">
+                    Transactions per month</p>
                 </div>
                 <div class="card-footer">
                   <div class="stats">
