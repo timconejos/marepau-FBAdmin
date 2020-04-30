@@ -3,7 +3,7 @@
   "dependencies": {
     "@tensorflow/tfjs": "^1.4.0",
     "chart.js": "^2.9.3",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "ol": "6.1.1",
     "parcel-plugin-asset-copier": "^1.0.0"
   },
